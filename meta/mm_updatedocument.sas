@@ -20,7 +20,6 @@
 
   @version 9.3
   @author Allan Bowe
-  @copyright GNU GENERAL PUBLIC LICENSE v3
 
 **/
 
@@ -100,8 +99,8 @@ run;
 
 filename &frefout temp;
 
-proc metadata in= &frefin out=&frefout
-  %if &mdebug=1 %then verbose;
+proc metadata in= &frefin
+  %if &mdebug=1 %then out=&frefout verbose;
 ;
 run;
 

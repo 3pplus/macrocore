@@ -21,6 +21,7 @@
 
   <h4> Dependencies </h4>
   @li mf_verifymacvars.sas
+  @li mm_createfolder.sas
 
 
   @param libname= Library name (as displayed to user, 256 chars). Duplicates
@@ -51,7 +52,6 @@
 
   @version 9.3
   @author Allan Bowe
-  @copyright GNU GENERAL PUBLIC LICENSE v3
 
 **/
 
@@ -106,6 +106,12 @@ run;
   %put WARNING: Library (&liburi) already exists with libref (&libref)  ;
   %return;
 %end;
+
+
+/**
+ * Attempt to create tree
+ */
+%mm_createfolder(path=&tree)
 
 /**
  * check tree exists

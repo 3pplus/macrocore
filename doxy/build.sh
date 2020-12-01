@@ -13,10 +13,12 @@ rm -rf $BUILD_FOLDER
 mkdir $BUILD_FOLDER
 
 # copy relevant files
-cp -r base $BUILD_FOLDER 
-cp -r meta $BUILD_FOLDER 
+cp -r base $BUILD_FOLDER
+cp -r meta $BUILD_FOLDER
+cp -r xcmd $BUILD_FOLDER
+cp -r viya $BUILD_FOLDER
 cp -r doxy $BUILD_FOLDER
-cp main.dox $BUILD_FOLDER 
+cp main.dox $BUILD_FOLDER
 cp doxy/Doxyfile $BUILD_FOLDER
 
 # update Doxyfile and generate
@@ -34,3 +36,4 @@ git add *
 git commit -m "build.sh build on $(date +%F:%H:%M:%S)"
 git push
 
+echo "check it out:  https://boemska.github.io/macrocore.github.io/files.html"
